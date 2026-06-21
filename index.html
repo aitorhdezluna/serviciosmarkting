@@ -88,16 +88,7 @@
         "@type": "Answer",
         "text": "No. La web es tuya: te entregamos el paquete completo de archivos y puedes llevártelo cuando quieras al hosting que prefieras."
       }
-<style>
-    .section-with-illustration {
-        display: flex;
-        flex-direction: column;
-        gap: 2.5rem;
-        align-items: center;
-        padding: 4rem 1.5rem;
-        max-width: 1100px;
-        margin: 0 auto;
-}
+    }
   ]
 }
 </script>
@@ -183,21 +174,6 @@
         </svg>
       </div>
     </div>
-    @media (min-width: 768px) {
-        .section-with-illustration {
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        .section-with-illustration.reverse {
-            flex-direction: row-reverse;
-        }
-        .section-with-illustration .col-text,
-        .section-with-illustration .col-media,
-        .section-with-illustration .col-media-double {
-            flex: 1;
-            width: 50%;
-        }
-    }
 
     <div class="metrics-strip" role="list">
       <div class="metric" role="listitem"><span class="metric-num">149€</span><span class="metric-label">Web desde</span></div>
@@ -206,27 +182,21 @@
       <div class="metric" role="listitem"><span class="metric-num">100%</span><span class="metric-label">Código en tu propiedad</span></div>
     </div>
   </section>
-    .col-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
 
   <!-- POR QUÉ IMPORTA -->
   <section class="section section-why">
-    <div class="section-inner narrow">
-      <p class="eyebrow">Por qué importa</p>
-      <h2>Más clientes. <em>Más confianza.</em> Desde el día uno.</h2>
-      <p class="lead">Hoy, si no estás en internet, no existes para la mayoría de tus clientes potenciales. Una web clara y profesional te pone delante de quienes ya te están buscando, sin depender de las redes sociales ni del boca a boca.</p>
-      <a href="#servicios" class="link-arrow">Ver cómo podemos ayudarte →</a>
+    <div class="section-inner why-grid">
+      <div class="why-copy">
+        <p class="eyebrow">Por qué importa</p>
+        <h2>Más clientes. <em>Más confianza.</em> Desde el día uno.</h2>
+        <p class="lead">Hoy, si no estás en internet, no existes para la mayoría de tus clientes potenciales. Una web clara y profesional te pone delante de quienes ya te están buscando, sin depender de las redes sociales ni del boca a boca.</p>
+        <a href="#servicios" class="link-arrow">Ver cómo podemos ayudarte →</a>
+      </div>
+      <div class="why-illustration">
+        <img src="img/thinking-mode.png" alt="Persona pensando frente a su ordenador" loading="lazy">
+      </div>
     </div>
   </section>
-    .col-media {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
 
   <!-- SERVICIOS -->
   <section class="section section-servicios" id="servicios">
@@ -234,11 +204,6 @@
       <p class="eyebrow">Servicios</p>
       <h2>Tu negocio, <em>también en internet</em></h2>
       <p class="lead">Si tienes un negocio o trabajas como autónomo y todavía no tienes página web, o la que tienes no representa lo que haces, podemos ayudarte. Diseñamos y desarrollamos páginas web profesionales, pensadas para que tengas presencia real en internet desde el primer día.</p>
-    .col-media img {
-        width: 100%;
-        max-width: 450px;
-        height: auto;
-    }
 
       <div class="feature-grid">
         <article class="feature-card">
@@ -262,13 +227,6 @@
           <p>Clara y profesional, para que tus clientes te encuentren y confíen en ti a primera vista.</p>
         </article>
       </div>
-    .col-media-double {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
-        width: 100%;
-    }
 
       <div class="pricing-row">
         <div class="price-card price-card-main">
@@ -289,28 +247,12 @@
           <a href="mantenimiento-web.html" class="link-arrow">Ver qué incluye →</a>
         </div>
       </div>
-    @media (min-width: 768px) {
-        .col-media-double {
-            flex-direction: row;
-            justify-content: center;
-        }
-        .col-media-double img {
-            width: 45%;
-            height: auto;
-        }
-    }
-</style>
 
       <div class="cta-banner">
         <p>¿Tienes un negocio y quieres tener presencia en internet?</p>
         <a href="#contacto" class="btn btn-primary">Solicita más información</a>
       </div>
-<section class="section-with-illustration">
-    <div class="col-text">
-        <p style="color: #4A5D4E; font-weight: bold; margin-bottom: 0.5rem;">Por qué importa</p>
-        <h2>Más clientes. <em>Más confianza.</em> Desde el día uno.</h2>
-        <p>Hoy, si no estás en internet, no existes para la mayoría de tus clientes potenciales. Una web clara y profesional te pone delante de quienes ya te están buscando.</p>
-</div>
+    </div>
   </section>
 
   <!-- OTROS SERVICIOS -->
@@ -343,9 +285,7 @@
           </div>
         </article>
       </div>
-    <div class="col-media">
-        <img src="undraw_next-adventure_pzln.png" alt="Más clientes, más confianza">
-</div>
+    </div>
   </section>
 
   <!-- POR QUÉ ELEGIRNOS -->
@@ -354,7 +294,6 @@
       <p class="eyebrow">Por qué elegirnos</p>
       <h2>Sin plantillas <em>que montar tú</em></h2>
       <p class="lead">Tu trabajo es atender tu negocio, no aprender a usar un editor de webs. Nos cuentas qué necesitas, nosotros nos encargamos de todo lo demás.</p>
-</section>
 
       <div class="reason-grid">
         <article class="reason-card">
@@ -374,12 +313,7 @@
           <p>Te entregamos el paquete completo de archivos. Puedes llevártelo a otro hosting cuando quieras, sin pedir permiso.</p>
         </article>
       </div>
-<section id="servicios" class="section-with-illustration reverse">
-    <div class="col-text">
-        <p style="color: #4A5D4E; font-weight: bold; margin-bottom: 0.5rem;">Servicios</p>
-        <h2>Tu negocio, <em>también en internet</em></h2>
-        <p>Diseñamos y desarrollamos páginas web profesionales, pensadas para que tengas presencia real en internet desde el primer día.</p>
-</div>
+    </div>
   </section>
 
   <!-- PROCESO -->
@@ -411,9 +345,7 @@
           <p>Revisas el resultado, ajustamos lo que haga falta y cerramos el proyecto.</p>
         </li>
       </ol>
-    <div class="col-media">
-        <img src="undraw_growth-analytics_vzjz.png" alt="Tu negocio en internet">
-</div>
+    </div>
   </section>
 
   <!-- GARANTÍAS -->
@@ -421,7 +353,6 @@
     <div class="section-inner">
       <p class="eyebrow">Garantías</p>
       <h2>Lo que <em>garantizamos</em></h2>
-</section>
 
       <div class="guarantee-grid">
         <article class="guarantee-card">
@@ -441,11 +372,7 @@
           <p>Te contestamos por email en menos de 48 horas. Sin tickets, sin esperas indefinidas.</p>
         </article>
       </div>
-<section class="section-with-illustration">
-    <div class="col-text">
-        <h2>Diseño Web <em>Pensado para convertir</em></h2>
-        <p>Estructura limpia, rendimiento impecable y adaptada perfectamente a cualquier pantalla, móvil o tableta.</p>
-</div>
+    </div>
   </section>
 
   <!-- PARA QUIÉN -->
@@ -464,9 +391,7 @@
         <article class="sector-card"><h3>Academias y formación</h3><p>Oferta de cursos clara, quién eres y cómo inscribirse, sin complicaciones.</p></article>
       </div>
       <p class="sector-footnote">¿No ves tu sector? También trabajamos con estudios creativos, fotógrafos, inmobiliarias y cualquier negocio que necesite presencia profesional en internet.</p>
-    <div class="col-media">
-        <img src="undraw_programming_j1zw.png" alt="Desarrollo y programación web">
-</div>
+    </div>
   </section>
 
   <!-- FAQ -->
@@ -475,7 +400,6 @@
       <p class="eyebrow">Antes de escribirnos</p>
       <h2>Preguntas <em>frecuentes</em></h2>
       <p class="lead">Respuestas directas a lo que más nos preguntan antes de arrancar un proyecto.</p>
-</section>
 
       <div class="faq-list">
         <details class="faq-item">
@@ -499,12 +423,7 @@
           <p>No. La web es tuya: te entregamos el paquete completo de archivos y puedes llevártelo cuando quieras al hosting que prefieras, sin coste ni necesidad de nuestro permiso.</p>
         </details>
       </div>
-<section class="section-with-illustration reverse">
-    <div class="col-text">
-        <p style="color: #4A5D4E; font-weight: bold; margin-bottom: 0.5rem;">Visibilidad Local</p>
-        <h2>Optimización de tu <em>ficha de Google</em></h2>
-        <p>Completamos y optimizamos tu Perfil de Empresa en Google para que aparezcas destacado en Google Maps ante búsquedas locales.</p>
-</div>
+    </div>
   </section>
 
   <!-- CONTACTO -->
@@ -533,16 +452,15 @@
           <button type="submit" class="btn btn-primary">Enviar mensaje</button>
         </form>
       </div>
-    <div class="col-media-double">
-        <img src="undraw_reviews_bmgj.png" alt="Gestión de Reseñas">
-        <img src="undraw_social-media-post_tg7l.png" alt="Publicaciones locales">
-</div>
+    </div>
   </section>
-</section>
 
   <!-- CTA FINAL -->
   <section class="section section-cta-final">
     <div class="section-inner narrow center">
+      <div class="cta-illustration">
+        <img src="img/next-adventure.png" alt="Persona lanzando su negocio hacia un alcance global" loading="lazy">
+      </div>
       <h2>¿Listo para tu <em>nueva web?</em></h2>
       <p class="lead">Cuéntanos tu proyecto en dos minutos. Te respondemos con una propuesta clara, sin compromiso.</p>
       <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Escríbenos ahora</a>
@@ -552,12 +470,7 @@
         <div><strong>Email directo</strong><span>aitorhernandez.es@gmail.com</span></div>
         <div><strong>Tenerife</strong><span>Trabajamos en remoto para toda España</span></div>
       </div>
-<section id="faq" class="section-with-illustration">
-    <div class="col-text">
-        <p style="color: #4A5D4E; font-weight: bold; margin-bottom: 0.5rem;">Antes de escribirnos</p>
-        <h2>Preguntas <em>frecuentes</em></h2>
-        <p>Respuestas directas a lo que más nos preguntan antes de arrancar un proyecto web.</p>
-</div>
+    </div>
   </section>
 
 </main>
@@ -568,13 +481,10 @@
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/aitorhdezdg/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://www.instagram.com/aitorherlu/" target="_blank" rel="noopener">Instagram</a>
-    <div class="col-media">
-        <img src="undraw_my-answer_au1h.png" alt="Preguntas frecuentes">
-</div>
+    </div>
   </div>
 </footer>
 
 <script src="script.js"></script>
 </body>
 </html>
-</section>
