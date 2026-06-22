@@ -28,53 +28,32 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- Estilos integrados para la distribución del hero con imagen y el portfolio -->
+<!-- Estilo extra integrado para controlar las imágenes del portfolio de manera adaptativa -->
 <style>
-  .service-hero-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    flex-wrap: wrap;
-  }
-  .service-hero-content {
-    flex: 1;
-    min-width: 300px;
-  }
-  .service-hero-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 480px;
-  }
-  .service-hero-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  .service-card-image {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    border: 1px solid rgba(22, 32, 29, 0.08);
-  }
-  .service-card-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
+.service-card-image {
+width: 100%;
+overflow: hidden;
+border-radius: 4px;
+margin-bottom: 16px;
+border: 1px solid rgba(22, 32, 29, 0.08);
+}
+.service-card-image img {
+width: 100%;
+height: auto;
+display: block;
+object-fit: cover;
+}
 </style>
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Diseño y desarrollo de página web",
-  "provider": { "@type": "Organization", "name": "Zenpyme", "url": "https://zenpyme.com/" },
-  "areaServed": "ES",
-  "description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido y entrega en menos de una semana.",
-  "offers": { "@type": "Offer", "price": "149", "priceCurrency": "EUR" }
+"@context": "https://schema.org",
+"@type": "Service",
+"name": "Diseño y desarrollo de página web",
+"provider": { "@type": "Organization", "name": "Zenpyme", "url": "https://zenpyme.com/" },
+"areaServed": "ES",
+"description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido y entrega en menos de una semana.",
+"offers": { "@type": "Offer", "price": "149", "priceCurrency": "EUR" }
 }
 </script>
 </head>
@@ -83,7 +62,8 @@
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
 <header class="site-header" id="top">
-  <div class="header-inner">
+<div class="header-inner">
+    <a href="index.html" class="logo">Zenpyme</a>
     <a href="index.html" class="logo" aria-label="Zenpyme">
       <svg width="132" height="32" viewBox="0 0 132 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: auto; height: 1.8rem;">
         <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2.5"/>
@@ -92,199 +72,194 @@
       </svg>
     </a>
 
-    <nav class="main-nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <div class="nav-dropdown">
-        <button class="nav-dropdown-trigger" aria-expanded="false">Servicios</button>
-        <div class="nav-dropdown-menu">
-          <a href="diseno-web.html" class="active">Diseño Web</a>
-          <a href="auditoria-digital.html">Auditoría digital</a>
-          <a href="ficha-google.html">Ficha de Google</a>
-          <a href="mantenimiento-web.html">Mantenimiento web</a>
-        </div>
-      </div>
-      <a href="index.html#contacto">Contacto</a>
-    </nav>
+<nav class="main-nav" aria-label="Navegación principal">
+<a href="index.html">Inicio</a>
+<div class="nav-dropdown">
+<button class="nav-dropdown-trigger" aria-expanded="false">Servicios</button>
+<div class="nav-dropdown-menu">
+<a href="diseno-web.html" class="active">Diseño Web</a>
+<a href="auditoria-digital.html">Auditoría digital</a>
+<a href="ficha-google.html">Ficha de Google</a>
+<a href="mantenimiento-web.html">Mantenimiento web</a>
+</div>
+</div>
+<a href="index.html#contacto">Contacto</a>
+</nav>
 
-    <a href="index.html#contacto" class="btn btn-primary nav-cta">Solicitar propuesta</a>
+<a href="index.html#contacto" class="btn btn-primary nav-cta">Solicitar propuesta</a>
 
-    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+<span></span><span></span><span></span>
+</button>
+</div>
 </header>
 
 <main id="contenido">
 
-  <div class="breadcrumb-row">
-    <a href="index.html#servicios">← Todos los servicios</a>
-  </div>
+<div class="breadcrumb-row">
+<a href="index.html#servicios">← Todos los servicios</a>
+</div>
 
-  <!-- HERO DE SERVICIO CON IMAGEN -->
-  <section class="service-hero">
-    <div class="service-hero-inner">
-      <div class="service-hero-content">
-        <span class="service-kicker">Servicio principal</span>
-        <h1>Diseño y desarrollo de tu página web</h1>
-        <p class="lead">Una web profesional, diseñada a tu medida, lista en menos de una semana y con SEO básico desde el primer día.</p>
-        <span class="service-price-tag">Desde 149€</span>
-        <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
-      </div>
-      <div class="service-hero-image">
-        <img src="programming.png" alt="Ilustración de un desarrollador trabajando frente al monitor y portátil programando código estructurado para una web">
-      </div>
-    </div>
-  </section>
+<!-- HERO DE SERVICIO -->
+<section class="service-hero">
+<div class="service-hero-inner">
+<span class="service-kicker">Servicio principal</span>
+<h1>Diseño y desarrollo de tu página web</h1>
+<p class="lead">Una web profesional, diseñada a tu medida, lista en menos de una semana y con SEO básico desde el primer día.</p>
+<span class="service-price-tag">Desde 149€</span>
+<a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
+</div>
+</section>
 
-  <!-- QUÉ INCLUJE -->
-  <section class="section section-incluye">
-    <div class="section-inner">
-      <p class="eyebrow">Qué incluye</p>
-      <h2>Esto es lo que <em>te llevas</em></h2>
+<!-- QUÉ INCLUYE -->
+<section class="section section-incluye">
+<div class="section-inner">
+<p class="eyebrow">Qué incluye</p>
+<h2>Esto es lo que <em>te llevas</em></h2>
 
-      <div class="includes-grid">
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>Diseño 100% a medida</h3>
-          <p>Adaptado a tu negocio y tu marca, sin plantillas genéricas.</p>
-        </article>
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>SEO básico incluido</h3>
-          <p>Estructura, metadatos y velocidad pensados para que Google te encuentre desde el primer día.</p>
-        </article>
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>Adaptada a móvil</h3>
-          <p>Se ve y funciona bien en cualquier pantalla, que es por donde te van a encontrar la mayoría de tus clientes.</p>
-        </article>
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>Formulario o botón de contacto</h3>
-          <p>Para que tus clientes puedan escribirte directamente desde la web.</p>
-        </article>
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>Una ronda de ajustes</h3>
-          <p>Revisamos juntos el resultado antes de publicar y ajustamos lo que no encaje.</p>
-        </article>
-        <article class="include-card">
-          <span class="include-check">✓</span>
-          <h3>El código es tuyo</h3>
-          <p>Te entregamos el paquete completo de archivos. Puedes llevártelo al hosting que prefieras, sin permiso ni dependencias.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+<div class="includes-grid">
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>Diseño 100% a medida</h3>
+<p>Adaptado a tu negocio y tu marca, sin plantillas genéricas.</p>
+</article>
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>SEO básico incluido</h3>
+<p>Estructura, metadatos y velocidad pensados para que Google te encuentre desde el primer día.</p>
+</article>
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>Adaptada a móvil</h3>
+<p>Se ve y funciona bien en cualquier pantalla, que es por donde te van a encontrar la mayoría de tus clientes.</p>
+</article>
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>Formulario o botón de contacto</h3>
+<p>Para que tus clientes puedan escribirte directamente desde la web.</p>
+</article>
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>Una ronda de ajustes</h3>
+<p>Revisamos juntos el resultado antes de publicar y ajustamos lo que no encaje.</p>
+</article>
+<article class="include-card">
+<span class="include-check">✓</span>
+<h3>El código es tuyo</h3>
+<p>Te entregamos el paquete completo de archivos. Puedes llevártelo al hosting que prefieras, sin permiso ni dependencias.</p>
+</article>
+</div>
+</div>
+</section>
 
-  <!-- QUÉ NO INCLUJE -->
-  <section class="section section-no-incluye">
-    <div class="section-inner narrow">
-      <p class="eyebrow">Para que no haya sorpresas</p>
-      <h2>Lo que <em>no incluye</em></h2>
+<!-- QUÉ NO INCLUYE -->
+<section class="section section-no-incluye">
+<div class="section-inner narrow">
+<p class="eyebrow">Para que no haya sorpresas</p>
+<h2>Lo que <em>no incluye</em></h2>
 
-      <ul class="no-includes-list">
-        <li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
-        <li><span><strong>Tienda online o pasarela de pago:</strong> si necesitas vender online, es un proyecto distinto que presupuestamos aparte.</span></li>
-        <li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año.</span></li>
-        <li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
-      </ul>
-    </div>
-  </section>
+<ul class="no-includes-list">
+<li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
+<li><span><strong>Tienda online o pasarela de pago:</strong> si necesitas vender online, es un proyecto distinto que presupuestamos aparte.</span></li>
+<li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año.</span></li>
+<li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
+</ul>
+</div>
+</section>
 
-  <!-- PASO A PASO -->
-  <section class="section section-proceso">
-    <div class="section-inner">
-      <p class="eyebrow">Cómo trabajamos este servicio</p>
-      <h2>Paso a <em>paso</em></h2>
+<!-- PASO A PASO -->
+<section class="section section-proceso">
+<div class="section-inner">
+<p class="eyebrow">Cómo trabajamos este servicio</p>
+<h2>Paso a <em>paso</em></h2>
 
-      <ol class="process-list">
-        <li class="process-step">
-          <span class="step-num">[ 01 ]</span>
-          <h3>Cuéntanos tu negocio</h3>
-          <p>Nos escribes contándonos a qué te dedicas y qué necesitas. Respondemos en 24-48h con una propuesta clara.</p>
-        </li>
-        <li class="process-step">
-          <span class="step-num">[ 02 ]</span>
-          <h3>Briefing rápido</h3>
-          <p>Te pedimos lo essencial: textos, fotos y referencias de estilo que te gusten. Sin formularios eternos.</p>
-        </li>
-        <li class="process-step">
-          <span class="step-num">[ 03 ]</span>
-          <h3>Diseño y desarrollo</h3>
-          <p>Construimos tu web con SEO básico integrado desde el primer borrador.</p>
-        </li>
-        <li class="process-step">
-          <span class="step-num">[ 04 ]</span>
-          <h3>Revisión y publicación</h3>
-          <p>Revisas el resultado, ajustamos lo que haga falta y la publicamos. Lista en menos de una semana.</p>
-        </li>
-      </ol>
+<ol class="process-list">
+<li class="process-step">
+<span class="step-num">[ 01 ]</span>
+<h3>Cuéntanos tu negocio</h3>
+<p>Nos escribes contándonos a qué te dedicas y qué necesitas. Respondemos en 24-48h con una propuesta clara.</p>
+</li>
+<li class="process-step">
+<span class="step-num">[ 02 ]</span>
+<h3>Briefing rápido</h3>
+<p>Te pedimos lo essencial: textos, fotos y referencias de estilo que te gusten. Sin formularios eternos.</p>
+</li>
+<li class="process-step">
+<span class="step-num">[ 03 ]</span>
+<h3>Diseño y desarrollo</h3>
+<p>Construimos tu web con SEO básico integrado desde el primer borrador.</p>
+</li>
+<li class="process-step">
+<span class="step-num">[ 04 ]</span>
+<h3>Revisión y publicación</h3>
+<p>Revisas el resultado, ajustamos lo que haga falta y la publicamos. Lista en menos de una semana.</p>
+</li>
+</ol>
 
-      <p class="faq-note">¿Tienes dudas? Revisa las <a href="index.html#faq">preguntas frecuentes</a> o escríbenos directamente.</p>
-    </div>
-  </section>
+<p class="faq-note">¿Tienes dudas? Revisa las <a href="index.html#faq">preguntas frecuentes</a> o escríbenos directamente.</p>
+</div>
+</section>
 
-  <!-- PROYECTOS REALIZADOS (PORTFOLIO) -->
-  <section class="section section-portfolio" id="portfolio">
-    <div class="section-inner">
-      <p class="eyebrow">Portfolio</p>
-      <h2>Casos reales, <em>resultados reales</em></h2>
-      <p class="lead">Echa un vistazo a algunos de los últimos proyectos que hemos diseñado, desarrollado y puesto en marcha para autónomos y profesionales.</p>
+<!-- PROYECTOS REALIZADOS (PORTFOLIO) -->
+<section class="section section-portfolio" id="portfolio">
+<div class="section-inner">
+<p class="eyebrow">Portfolio</p>
+<h2>Casos reales, <em>resultados reales</em></h2>
+<p class="lead">Echa un vistazo a algunos de los últimos proyectos que hemos diseñado, desarrollado y puesto en marcha para autónomos y profesionales.</p>
 
-      <div class="service-pair">
-        <article class="service-card">
-          <div class="service-card-image">
-            <img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo">
-          </div>
-          <span class="feature-tag">Web Personal</span>
-          <h3>Aitor Hernández - Tres Veces Yo</h3>
-          <p>Sitio web para el poemario y libro "Tres veces yo". Un espacio digital limpio enfocado en la obra, la experiencia de lectura y la conexión directa con los lectores.</p>
-          <div class="service-card-actions">
-            <a href="https://aitorhdez.com" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
-          </div>
-        </article>
+<div class="service-pair">
+<article class="service-card">
+<div class="service-card-image">
+<img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo">
+</div>
+<span class="feature-tag">Web Personal</span>
+<h3>Aitor Hernández - Tres Veces Yo</h3>
+<p>Sitio web para el poemario y libro "Tres veces yo". Un espacio digital limpio enfocado en la obra, la experiencia de lectura y la conexión directa con los lectores.</p>
+<div class="service-card-actions">
+<a href="https://aitorhdez.com" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+</div>
+</article>
 
-        <article class="service-card">
-          <div class="service-card-image">
-            <img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé">
-          </div>
-          <span class="feature-tag">Proyecto Cultural</span>
-          <h3>Agrupación Musical Mamerecumbé</h3>
-          <p>Diseño y desarrollo web optimizado para difundir la historia, la galería de imágenes y la agenda de eventos de la agrupación, con código integrado de forma eficiente.</p>
-          <div class="service-card-actions">
-            <a href="https://aitorhdezluna.github.io/mamerecumbe/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+<article class="service-card">
+<div class="service-card-image">
+<img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé">
+</div>
+<span class="feature-tag">Proyecto Cultural</span>
+<h3>Agrupación Musical Mamerecumbé</h3>
+<p>Diseño y desarrollo web optimizado para difundir la historia, la galería de imágenes y la agenda de eventos de la agrupación, con código integrado de forma eficiente.</p>
+<div class="service-card-actions">
+<a href="https://aitorhdezluna.github.io/mamerecumbe/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+</div>
+</article>
+</div>
+</div>
+</section>
 
-  <!-- CTA FINAL -->
-  <section class="section section-cta-final">
-    <div class="section-inner narrow center">
-      <h2>¿Listo para <em>empezar?</em></h2>
-      <p class="lead">Cuéntanos tu proyecto en dos minutos. Te respondemos con una propuesta clara, sin compromiso.</p>
-      <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
+<!-- CTA FINAL -->
+<section class="section section-cta-final">
+<div class="section-inner narrow center">
+<h2>¿Listo para <em>empezar?</em></h2>
+<p class="lead">Cuéntanos tu proyecto en dos minutos. Te respondemos con una propuesta clara, sin compromiso.</p>
+<a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
 
-      <div class="final-meta">
-        <div><strong>Respuesta en 48h</strong><span>De lunes a viernes</span></div>
-        <div><strong>Email directo</strong><span>aitorhernandez.es@gmail.com</span></div>
-        <div><strong>Tenerife</strong><span>Trabajamos en remoto para toda España</span></div>
-      </div>
-    </div>
-  </section>
+<div class="final-meta">
+<div><strong>Respuesta en 48h</strong><span>De lunes a viernes</span></div>
+<div><strong>Email directo</strong><span>aitorhernandez.es@gmail.com</span></div>
+<div><strong>Tenerife</strong><span>Trabajamos en remoto para toda España</span></div>
+</div>
+</div>
+</section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <span>© 2026 Zenpyme · Tenerife</span>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/aitorhdezdg/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.instagram.com/aitorherlu/" target="_blank" rel="noopener">Instagram</a>
-    </div>
-  </div>
+<div class="footer-inner">
+<span>© 2026 Zenpyme · Tenerife</span>
+<div class="footer-links">
+<a href="https://www.linkedin.com/in/aitorhdezdg/" target="_blank" rel="noopener">LinkedIn</a>
+<a href="https://www.instagram.com/aitorherlu/" target="_blank" rel="noopener">Instagram</a>
+</div>
+</div>
 </footer>
 
 <script src="script.js"></script>
