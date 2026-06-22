@@ -29,6 +29,23 @@
 
 <link rel="stylesheet" href="styles.css">
 
+<!-- Estilo extra opcional e integrado para controlar las imágenes del portfolio de manera adaptativa -->
+<style>
+  .service-card-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(22, 32, 29, 0.08);
+  }
+  .service-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -292,6 +309,9 @@
 
       <div class="service-pair">
         <article class="service-card">
+          <div class="service-card-image">
+            <img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo">
+          </div>
           <span class="feature-tag">Web Personal</span>
           <h3>Aitor Hernández - Tres Veces Yo</h3>
           <p>Sitio web para el poemario y libro "Tres veces yo". Un espacio digital limpio enfocado en la obra, la experiencia de lectura y la conexión directa con los lectores.</p>
@@ -301,6 +321,9 @@
         </article>
 
         <article class="service-card">
+          <div class="service-card-image">
+            <img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé">
+          </div>
           <span class="feature-tag">Proyecto Cultural</span>
           <h3>Agrupación Musical Mamerecumbé</h3>
           <p>Diseño y desarrollo web optimizado para difundir la historia, la galería de imágenes y la agenda de eventos de la agrupación, con código integrado de forma eficiente.</p>
@@ -356,7 +379,7 @@
         <li class="process-step">
           <span class="step-num">[ 02 ]</span>
           <h3>Briefing rápido</h3>
-          <p>Te pedimos lo esencial según el servicio: textos, accesos o información del negocio. Sin formularios eternos.</p>
+          <p>Te pedimos lo essencial según el servicio: textos, accesos o información del negocio. Sin formularios eternos.</p>
         </li>
         <li class="process-step">
           <span class="step-num">[ 03 ]</span>
