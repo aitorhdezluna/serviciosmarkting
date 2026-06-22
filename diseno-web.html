@@ -28,8 +28,29 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- Estilo extra integrado para controlar las imágenes del portfolio de manera adaptativa -->
+<!-- Estilos integrados para la distribución del hero con imagen y el portfolio -->
 <style>
+  .service-hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  .service-hero-content {
+    flex: 1;
+    min-width: 300px;
+  }
+  .service-hero-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 480px;
+  }
+  .service-hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
   .service-card-image {
     width: 100%;
     overflow: hidden;
@@ -99,18 +120,23 @@
     <a href="index.html#servicios">← Todos los servicios</a>
   </div>
 
-  <!-- HERO DE SERVICIO -->
+  <!-- HERO DE SERVICIO CON IMAGEN -->
   <section class="service-hero">
     <div class="service-hero-inner">
-      <span class="service-kicker">Servicio principal</span>
-      <h1>Diseño y desarrollo de tu página web</h1>
-      <p class="lead">Una web profesional, diseñada a tu medida, lista en menos de una semana y con SEO básico desde el primer día.</p>
-      <span class="service-price-tag">Desde 149€</span>
-      <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
+      <div class="service-hero-content">
+        <span class="service-kicker">Servicio principal</span>
+        <h1>Diseño y desarrollo de tu página web</h1>
+        <p class="lead">Una web profesional, diseñada a tu medida, lista en menos de una semana y con SEO básico desde el primer día.</p>
+        <span class="service-price-tag">Desde 149€</span>
+        <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
+      </div>
+      <div class="service-hero-image">
+        <img src="programming.png" alt="Ilustración de un desarrollador trabajando frente al monitor y portátil programando código estructurado para una web">
+      </div>
     </div>
   </section>
 
-  <!-- QUÉ INCLUYE -->
+  <!-- QUÉ INCLUJE -->
   <section class="section section-incluye">
     <div class="section-inner">
       <p class="eyebrow">Qué incluye</p>
@@ -151,7 +177,7 @@
     </div>
   </section>
 
-  <!-- QUÉ NO INCLUYE -->
+  <!-- QUÉ NO INCLUJE -->
   <section class="section section-no-incluye">
     <div class="section-inner narrow">
       <p class="eyebrow">Para que no haya sorpresas</p>
