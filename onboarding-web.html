@@ -14,137 +14,114 @@
 <link rel="stylesheet" href="styles.css">
 
 <style>
-  /* Estilos específicos para la sección del formulario integrado de Zenpyme */
-  .onboarding-section {
-    padding: 60px 0;
-    background-color: #faf8f5; /* Tono crema corporativo */
-    min-height: calc(100vh - 200px); /* Cubre toda la pantalla entre header y footer */
-  }
-  
-  .onboarding-container {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
-  
-  .onboarding-intro {
-    margin-bottom: 40px;
-    text-align: center;
-  }
-  
-  .onboarding-intro h1 {
-    font-family: 'Lora', serif;
-    font-size: 2.25rem;
-    color: #1c3b34;
-    margin: 0 0 12px 0;
-  }
-  
-  .onboarding-intro p {
-    font-size: 1.05rem;
-    color: rgba(22, 32, 29, 0.7);
-    line-height: 1.5;
-    margin: 0;
-  }
+/* Estilos específicos para la sección del formulario integrado */
+.onboarding-section {
+padding: 60px 0;
+background-color: #faf8f5; /* El tono crema de fondo de Zenpyme */
+min-height: calc(100vh - 200px); /* Asegura que cubra la pantalla entre header y footer */
+}
 
-  /* Contenedor del iframe de Tally con la estética oficial de Zenpyme */
-  .tally-wrapper {
-    background: #ffffff;
-    border: 1px solid rgba(22, 32, 29, 0.08);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(22, 32, 29, 0.02);
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    padding: 16px 0; /* Espacio para que el formulario respire de forma limpia */
-  }
+.onboarding-container {
+max-width: 760px;
+margin: 0 auto;
+padding: 0 24px;
+}
 
-  .tally-wrapper iframe {
-    display: block;
-    width: 100%;
-    border: 0;
-  }
+.onboarding-intro {
+margin-bottom: 40px;
+text-align: center;
+}
 
-  @media (max-width: 768px) {
-    .onboarding-section {
-      padding: 40px 0;
-    }
-    .onboarding-intro h1 {
-      font-size: 1.85rem;
-    }
-  }
+.onboarding-intro h1 {
+font-family: 'Lora', serif;
+font-size: 2.25rem;
+color: #1c3b34;
+margin: 0 0 12px 0;
+}
+
+.onboarding-intro p {
+font-size: 1.05rem;
+color: rgba(22, 32, 29, 0.7);
+line-height: 1.5;
+margin: 0;
+}
+
+/* Contenedor del iframe de Tally */
+.tally-wrapper {
+background: #ffffff;
+border: 1px solid rgba(22, 32, 29, 0.08);
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(22, 32, 29, 0.02);
+overflow: hidden;
+position: relative;
+width: 100%;
+/* Un ligero ajuste de padding interno para que respire antes de cargar el Tally */
+padding: 10px 0; 
+}
+
+/* Ajuste de responsiveness para el widget de Tally */
+.tally-wrapper iframe {
+display: block;
+border: none;
+}
+
+@media (max-width: 768px) {
+.onboarding-section {
+padding: 40px 0;
+}
+.onboarding-intro h1 {
+font-size: 1.85rem;
+}
+}
 </style>
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="logo">Zenpyme</a>
-    <nav class="main-nav" aria-label="Navegación de soporte">
-      <span style="font-family: 'Space Mono', monospace; font-size: 0.85rem; color: #1c3b34; text-transform: uppercase; letter-spacing: 1px;">Área de Clientes</span>
-    </nav>
-    <span class="nav-cta" style="font-size: 0.9rem; color: rgba(22, 32, 29, 0.6); font-weight: 500;">Paso 2 de 2</span>
-  </div>
+<div class="header-inner">
+<a href="index.html" class="logo">Zenpyme</a>
+<nav class="main-nav" aria-label="Navegación de soporte">
+<span style="font-family: 'Space Mono', monospace; font-size: 0.85rem; color: #1c3b34; text-transform: uppercase; letter-spacing: 1px;">Área de Clientes</span>
+</nav>
+<span class="nav-cta" style="font-size: 0.9rem; color: rgba(22, 32, 29, 0.6);">Paso 2 de 2</span>
+</div>
 </header>
 
 <main id="contenido">
 
-  <section class="onboarding-section">
-    <div class="onboarding-container">
-      
-      <div class="onboarding-intro">
-        <h1>Vamos a dar forma a tu web</h1>
-        <p>Completa este breve formulario guiado (te llevará unos 10-15 minutos). Tus respuestas serán la materia prima que procesaremos con nuestro sistema de IA para redactar y estructurar tu borrador inicial.</p>
-      </div>
+<section class="onboarding-section">
+<div class="onboarding-container">
+
+<div class="onboarding-intro">
+<h1>Vamos a dar forma a tu web</h1>
+<p>Completa este breve formulario guiado (te llevará unos 10-15 minutos). Tus respuestas serán la materia prima que procesaremos con nuestro sistema de IA para redactar y estructurar el borrador inicial.</p>
+</div>
 
       <div class="tally-wrapper">
         <iframe 
-          data-tally-src="https://tally.so/embed/1AOYjO?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-          loading="lazy" 
+          src="https://tally.so/embed/r3MX9b?alignLeft=1&hideTitle=1&transparentBackground=1" 
           width="100%" 
-          height="2201" 
-          frameborder="0" 
-          marginheight="0" 
-          marginwidth="0" 
-          title="Cuéntanos sobre tu proyecto – Zenpyme">
+          height="800" 
+          title="Briefing de Diseño Web — Zenpyme">
         </iframe>
-        
-        <script>
-          var d=document,
-              w="https://tally.so/widgets/embed.js",
-              v=function(){
-                if("undefined"!=typeof Tally) {
-                  Tally.loadEmbeds();
-                } else {
-                  d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){
-                    e.src=e.dataset.tallySrc;
-                  }));
-                }
-              };
-          if("undefined"!=typeof Tally) {
-            v();
-          } else if(d.querySelector('script[src="'+w+'"]')==null) {
-            var s=d.createElement("script");
-            s.src=w;
-            s.onload=v;
-            s.onerror=v;
-            d.body.appendChild(s);
-          }
-        </script>
       </div>
+<iframe data-tally-src="https://tally.so/embed/1AOYjO?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2201" frameborder="0" marginheight="0" marginwidth="0" title="Cuéntanos sobre tu proyecto – Zenpyme"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 
-    </div>
-  </section>
+</div>
+</section>
 
 </main>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <span>© 2026 Zenpyme · Área Privada de Onboarding</span>
-    <div class="footer-links">
-      <span style="color: rgba(22, 32, 29, 0.4); font-size: 0.9rem;">Soporte directo: aitorhernandez.es@gmail.com</span>
-    </div>
-  </div>
+<div class="footer-inner">
+<span>© 2026 Zenpyme · Área Privada de Onboarding</span>
+<div class="footer-links">
+<span style="color: rgba(22, 32, 29, 0.4); font-size: 0.9rem;">Soporte directo: aitorhernandez.es@gmail.com</span>
+</div>
+</div>
 </footer>
 
+<script async src="https://tally.so/widgets/embed.js"></script>
 </body>
 </html>
