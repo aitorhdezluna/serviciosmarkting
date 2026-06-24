@@ -1,267 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diseño Web para Pymes y Autónomos | Zenpyme</title>
-<meta name="description" content="Diseño y desarrollo de páginas web para pequeños negocios y autónomos. Desde 149€, lista en menos de una semana, con SEO básico incluido.">
-<meta name="author" content="Zenpyme">
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1c3b34">
-
-<meta property="og:title" content="Diseño Web para Pymes y Autónomos | Zenpyme">
-<meta property="og:description" content="Diseño y desarrollo de páginas web para pequeños negocios y autónomos. Desde 149€, lista en menos de una semana, con SEO básico incluido.">
-<meta property="og:image" content="https://zenpyme.com/fondo-zenpyme.png">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zenpyme.com/diseno-web.html">
-<meta property="og:locale" content="es_ES">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Diseño Web para Pymes y Autónomos | Zenpyme">
-<meta name="twitter:description" content="Diseño y desarrollo de páginas web para pequeños negocios y autónomos. Desde 149€, lista en menos de una semana, con SEO básico incluido.">
-
-<link rel="canonical" href="https://zenpyme.com/diseno-web.html">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="styles.css">
-
-<!-- Estilo extra integrado para controlar las imágenes del portfolio de manera adaptativa -->
-<style>
-.service-card-image {
-width: 100%;
-overflow: hidden;
-border-radius: 4px;
-margin-bottom: 16px;
-border: 1px solid rgba(22, 32, 29, 0.08);
-}
-.service-card-image img {
-width: 100%;
-height: auto;
-display: block;
-object-fit: cover;
-}
-</style>
-
-<script type="application/ld+json">
-{
-"@context": "https://schema.org",
-"@type": "Service",
-"name": "Diseño y desarrollo de página web",
-"provider": { "@type": "Organization", "name": "Zenpyme", "url": "https://zenpyme.com/" },
-"areaServed": "ES",
-"description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido y entrega en menos de una semana.",
-"offers": { "@type": "Offer", "price": "149", "priceCurrency": "EUR" }
-}
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Web Profesional para Autónomos y Pymes | Zenpyme</title>
+    <meta name="description" content="Desarrollo de páginas web corporativas, minimalistas y optimizadas para convertir visitas en clientes. Proceso ágil y sin complicaciones.">
+    <!-- Aquí puedes mantener tu enlace al CSS global de Zenpyme -->
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* Estilos base integrados para asegurar consistencia visual y legibilidad */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-light: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text-color); margin: 0; padding: 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .hero { text-align: center; padding: 60px 20px; background: var(--bg-light); border-radius: 8px; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5rem; color: var(--primary-color); margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { padding: 25px; background: #fff; border: 1px solid #e0e0e0; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .card h3 { color: var(--primary-color); margin-top: 0; }
+        .process-step { border-left: 4px solid var(--primary-color); padding-left: 20px; margin-bottom: 30px; }
+        .cta-section { text-align: center; margin-top: 60px; padding: 40px; background: var(--primary-color); color: #fff; border-radius: 8px; }
+        .cta-button { display: inline-block; background: var(--accent-color); color: #fff; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background 0.3s; margin-top: 20px; }
+        .cta-button:hover { background: #c0392b; }
+        .scope-box { background: #fff9e6; border: 1px solid #ffe0b2; padding: 20px; border-radius: 6px; margin-top: 30px; }
+    </style>
 </head>
 <body>
 
-<a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <main class="container">
+        
+        <!-- SECCIÓN HERO: Propuesta de valor clara -->
+        <section class="hero">
+            <h1>Tu negocio no para. Tu web tampoco.</h1>
+            <p>Diseño páginas web corporativas, minimalistas y orientadas a resultados. Sin rodeos, sin tecnicismos y optimizadas para que tus clientes ideales te encuentren y te contraten.</p>
+            <a href="#contacto" class="cta-button">Quiero lanzar mi web</a>
+        </section>
 
-<header class="site-header" id="top">
-<div class="header-inner">
-    <a href="index.html" class="logo">Zenpyme</a>
-    <a href="index.html" class="logo" aria-label="Zenpyme">
-      <svg width="132" height="32" viewBox="0 0 132 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block; width: auto; height: 1.8rem;">
-        <circle cx="16" cy="16" r="10" stroke="currentColor" stroke-width="2.5"/>
-        <circle cx="16" cy="16" r="4" fill="currentColor"/>
-        <text x="38" y="23" font-family="Lora, Georgia, serif" font-size="20" font-weight="600" fill="currentColor" letter-spacing="0.03em">zenpyme</text>
-      </svg>
-    </a>
+        <!-- SECCIÓN BENEFICIOS / QUÉ INCLUYE: Alcance del producto web -->
+        <section>
+            <h2>¿Qué incluye el servicio de Diseño Web en Zenpyme?</h2>
+            <p>Desarrollo soluciones cerradas para que sepas exactamente qué estás contratando, protegiendo tu inversión y mi tiempo de entrega.</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Estructura Estratégica</h3>
+                    <p>Diseño de hasta 5 secciones clave (Home, Sobre Mí, Servicios, Contacto, Aviso Legal) pensadas para guiar al usuario hacia la acción.</p>
+                </div>
+                <div class="card">
+                    <h3>Código Limpio y Rápido</h3>
+                    <p>Desarrollo a medida sin software pesado. Tu web cargará al instante, algo que a Google le encanta para posicionarte mejor.</p>
+                </div>
+                <div class="card">
+                    <h3>Diseño Responsive Adaptable</h3>
+                    <p>Tu sitio se verá impecable y profesional tanto en el ordenador de una oficina como en la pantalla de un teléfono móvil.</p>
+                </div>
+            </div>
 
-<nav class="main-nav" aria-label="Navegación principal">
-<a href="index.html">Inicio</a>
-<div class="nav-dropdown">
-<button class="nav-dropdown-trigger" aria-expanded="false">Servicios</button>
-<div class="nav-dropdown-menu">
-<a href="diseno-web.html" class="active">Diseño Web</a>
-<a href="auditoria-digital.html">Auditoría digital</a>
-<a href="ficha-google.html">Ficha de Google</a>
-<a href="mantenimiento-web.html">Mantenimiento web</a>
-</div>
-</div>
-<a href="index.html#contacto">Contacto</a>
-</nav>
+            <!-- Caja de alcance: Gestión de expectativas de negocio -->
+            <div class="scope-box">
+                <strong>📌 Nota de transparencia sobre el alcance:</strong> Para mantener los tiempos de entrega ágiles, este servicio requiere que aportes los textos y las imágenes de tu negocio. Si no los tienes, no te preocupes, te facilitaré una guía sencilla para prepararlos o podemos presupuestar la redacción por separado.
+            </div>
+        </section>
 
-<a href="index.html#contacto" class="btn btn-primary nav-cta">Solicitar propuesta</a>
+        <!-- SECCIÓN PROCESO: Venta de la "fricción cero" -->
+        <section style="margin-top: 60px;">
+            <h2>Un proceso en 3 pasos, sin reuniones infinitas</h2>
+            <p>Sé que tu tiempo es dinero. Por eso he diseñado un sistema de trabajo donde tú solo tienes que poner el alma de tu negocio y yo pongo el código.</p>
+            
+            <div class="process-step">
+                <h3>1. Contratación y Briefing Guiado</h3>
+                <p>Una vez formalizado el servicio, accederás a un formulario exclusivo en mi web. En menos de 15 minutos me darás las claves de tu negocio, tus colores y tus objetivos sin necesidad de agendar largas reuniones.</p>
+            </div>
+            
+            <div class="process-step">
+                <h3>2. Desarrollo y Maquetación</h3>
+                <p>Me encierro a programar. Traduzco tu briefing en código limpio, aplicando técnicas de UI/UX para asegurar que la web sea intuitiva y atractiva.</p>
+            </div>
+            
+            <div class="process-step">
+                <h3>3. Revisión y Lanzamiento</h3>
+                <p>Analizamos el resultado en una sesión conjunta, hacemos los ajustes finos y subimos la web a tu dominio. Tu negocio ya es visible para el mundo.</p>
+            </div>
+        </section>
 
-<button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-<span></span><span></span><span></span>
-</button>
-</div>
-</header>
+        <!-- SECCIÓN CTA: Cierre e inicio del flujo -->
+        <section id="contacto" class="cta-section">
+            <h2>¿Listo para tener la web que tu negocio merece?</h2>
+            <p>Hablemos de tu proyecto. Cuéntame qué necesitas y te enviaré la propuesta comercial para activar tu proceso de onboarding.</p>
+            <a href="mailto:tu-correo@zenpyme.com?subject=Interés%20en%20Diseño%20Web%20-%20Zenpyme" class="cta-button">Solicitar Presupuesto Gratuito</a>
+        </section>
 
-<main id="contenido">
+    </main>
 
-<div class="breadcrumb-row">
-<a href="index.html#servicios">← Todos los servicios</a>
-</div>
-
-<!-- HERO DE SERVICIO -->
-<section class="service-hero">
-<div class="service-hero-inner">
-<span class="service-kicker">Servicio principal</span>
-<h1>Diseño y desarrollo de tu página web</h1>
-<p class="lead">Una web profesional, diseñada a tu medida, lista en menos de una semana y con SEO básico desde el primer día.</p>
-<span class="service-price-tag">Desde 149€</span>
-<a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
-</div>
-</section>
-
-<!-- QUÉ INCLUYE -->
-<section class="section section-incluye">
-<div class="section-inner">
-<p class="eyebrow">Qué incluye</p>
-<h2>Esto es lo que <em>te llevas</em></h2>
-
-<div class="includes-grid">
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>Diseño 100% a medida</h3>
-<p>Adaptado a tu negocio y tu marca, sin plantillas genéricas.</p>
-</article>
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>SEO básico incluido</h3>
-<p>Estructura, metadatos y velocidad pensados para que Google te encuentre desde el primer día.</p>
-</article>
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>Adaptada a móvil</h3>
-<p>Se ve y funciona bien en cualquier pantalla, que es por donde te van a encontrar la mayoría de tus clientes.</p>
-</article>
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>Formulario o botón de contacto</h3>
-<p>Para que tus clientes puedan escribirte directamente desde la web.</p>
-</article>
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>Una ronda de ajustes</h3>
-<p>Revisamos juntos el resultado antes de publicar y ajustamos lo que no encaje.</p>
-</article>
-<article class="include-card">
-<span class="include-check">✓</span>
-<h3>El código es tuyo</h3>
-<p>Te entregamos el paquete completo de archivos. Puedes llevártelo al hosting que prefieras, sin permiso ni dependencias.</p>
-</article>
-</div>
-</div>
-</section>
-
-<!-- QUÉ NO INCLUYE -->
-<section class="section section-no-incluye">
-<div class="section-inner narrow">
-<p class="eyebrow">Para que no haya sorpresas</p>
-<h2>Lo que <em>no incluye</em></h2>
-
-<ul class="no-includes-list">
-<li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
-<li><span><strong>Tienda online o pasarela de pago:</strong> si necesitas vender online, es un proyecto distinto que presupuestamos aparte.</span></li>
-<li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año.</span></li>
-<li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
-</ul>
-</div>
-</section>
-
-<!-- PASO A PASO -->
-<section class="section section-proceso">
-<div class="section-inner">
-<p class="eyebrow">Cómo trabajamos este servicio</p>
-<h2>Paso a <em>paso</em></h2>
-
-<ol class="process-list">
-<li class="process-step">
-<span class="step-num">[ 01 ]</span>
-<h3>Cuéntanos tu negocio</h3>
-<p>Nos escribes contándonos a qué te dedicas y qué necesitas. Respondemos en 24-48h con una propuesta clara.</p>
-</li>
-<li class="process-step">
-<span class="step-num">[ 02 ]</span>
-<h3>Briefing rápido</h3>
-<p>Te pedimos lo essencial: textos, fotos y referencias de estilo que te gusten. Sin formularios eternos.</p>
-</li>
-<li class="process-step">
-<span class="step-num">[ 03 ]</span>
-<h3>Diseño y desarrollo</h3>
-<p>Construimos tu web con SEO básico integrado desde el primer borrador.</p>
-</li>
-<li class="process-step">
-<span class="step-num">[ 04 ]</span>
-<h3>Revisión y publicación</h3>
-<p>Revisas el resultado, ajustamos lo que haga falta y la publicamos. Lista en menos de una semana.</p>
-</li>
-</ol>
-
-<p class="faq-note">¿Tienes dudas? Revisa las <a href="index.html#faq">preguntas frecuentes</a> o escríbenos directamente.</p>
-</div>
-</section>
-
-<!-- PROYECTOS REALIZADOS (PORTFOLIO) -->
-<section class="section section-portfolio" id="portfolio">
-<div class="section-inner">
-<p class="eyebrow">Portfolio</p>
-<h2>Casos reales, <em>resultados reales</em></h2>
-<p class="lead">Echa un vistazo a algunos de los últimos proyectos que hemos diseñado, desarrollado y puesto en marcha para autónomos y profesionales.</p>
-
-<div class="service-pair">
-<article class="service-card">
-<div class="service-card-image">
-<img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo">
-</div>
-<span class="feature-tag">Web Personal</span>
-<h3>Aitor Hernández - Tres Veces Yo</h3>
-<p>Sitio web para el poemario y libro "Tres veces yo". Un espacio digital limpio enfocado en la obra, la experiencia de lectura y la conexión directa con los lectores.</p>
-<div class="service-card-actions">
-<a href="https://aitorhdez.com" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
-</div>
-</article>
-
-<article class="service-card">
-<div class="service-card-image">
-<img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé">
-</div>
-<span class="feature-tag">Proyecto Cultural</span>
-<h3>Agrupación Musical Mamerecumbé</h3>
-<p>Diseño y desarrollo web optimizado para difundir la historia, la galería de imágenes y la agenda de eventos de la agrupación, con código integrado de forma eficiente.</p>
-<div class="service-card-actions">
-<a href="https://aitorhdezluna.github.io/mamerecumbe/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
-</div>
-</article>
-</div>
-</div>
-</section>
-
-<!-- CTA FINAL -->
-<section class="section section-cta-final">
-<div class="section-inner narrow center">
-<h2>¿Listo para <em>empezar?</em></h2>
-<p class="lead">Cuéntanos tu proyecto en dos minutos. Te respondemos con una propuesta clara, sin compromiso.</p>
-<a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
-
-<div class="final-meta">
-<div><strong>Respuesta en 48h</strong><span>De lunes a viernes</span></div>
-<div><strong>Email directo</strong><span>aitorhernandez.es@gmail.com</span></div>
-<div><strong>Tenerife</strong><span>Trabajamos en remoto para toda España</span></div>
-</div>
-</div>
-</section>
-
-</main>
-
-<footer class="site-footer">
-<div class="footer-inner">
-<span>© 2026 Zenpyme · Tenerife</span>
-<div class="footer-links">
-<a href="https://www.linkedin.com/in/aitorhdezdg/" target="_blank" rel="noopener">LinkedIn</a>
-<a href="https://www.instagram.com/aitorherlu/" target="_blank" rel="noopener">Instagram</a>
-</div>
-</div>
-</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
