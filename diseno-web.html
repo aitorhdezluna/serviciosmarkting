@@ -28,7 +28,6 @@
 
 <link rel="stylesheet" href="styles.css">
 
-<!-- Estilo extra integrado para controlar las imágenes del portfolio y la tabla de precios -->
 <style>
   .service-card-image {
     width: 100%;
@@ -44,7 +43,6 @@
     object-fit: cover;
   }
   
-  /* Nuevos estilos integrados para emular la estructura de la imagen de referencia image_8b34df.jpg */
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -128,22 +126,23 @@
     margin-right: 8px;
   }
   
-  /* Tarjeta destacada (Inversión de color e impecable contraste para Zenpyme) */
+  /* Tarjeta destacada */
   .pricing-card.featured {
     background: #1c3b34;
-    color: #ffffff;
+    color: #ffffff !important;
     border: none;
   }
   .pricing-card.featured h3, 
-  .pricing-card.featured .card-price {
-    color: #ffffff;
+  .pricing-card.featured .card-price,
+  .pricing-card.featured p {
+    color: #ffffff !important;
   }
   .pricing-card.featured .card-subtitle,
   .pricing-card.featured .card-price span {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85) !important;
   }
   .pricing-card.featured .card-price-meta {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.65) !important;
   }
   .pricing-card.featured .card-tag {
     background: #f39c12;
@@ -152,11 +151,78 @@
   .pricing-card.featured .card-features-list {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
+  .pricing-card.featured .card-features-list li {
+    color: rgba(255, 255, 255, 0.95) !important;
+  }
   .pricing-card.featured .card-features-list li::before {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
-  /* Caja de nota informativa sobre el alcance */
+  /* NUEVOS ESTILOS: Bloque Cross-selling basado en image_8bc008.png */
+  .cross-selling-box {
+    background: #ffffff;
+    border: 1px solid rgba(22, 32, 29, 0.08);
+    border-radius: 16px;
+    padding: 24px 32px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .cross-selling-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cross-selling-box h4 {
+    font-family: 'Lora', serif;
+    font-size: 1.35rem;
+    color: #1c3b34;
+    margin: 0;
+  }
+  .cross-pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .cross-pill {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #1c3b34;
+    background: rgba(28, 59, 52, 0.04);
+    border: 1px solid rgba(28, 59, 52, 0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .cross-selling-action {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1c3b34;
+    text-decoration: none;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+  }
+  .cross-selling-action:hover {
+    opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .cross-selling-box {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .cross-selling-action {
+      margin-top: 8px;
+      align-self: flex-end;
+    }
+  }
+
   .scope-box {
     background: rgba(243, 156, 18, 0.08);
     border: 1px solid rgba(243, 156, 18, 0.2);
@@ -174,7 +240,7 @@
   "name": "Diseño y desarrollo de página web",
   "provider": { "@type": "Organization", "name": "Zenpyme", "url": "https://zenpyme.com/" },
   "areaServed": "ES",
-  "description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido y entrega en menos de una semana.",
+  "description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido and entrega en menos de una semana.",
   "offers": { "@type": "Offer", "price": "149", "priceCurrency": "EUR" }
 }
 </script>
@@ -226,7 +292,7 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DE PRECIOS Y PLANES (Inspirada en image_8b34df.jpg, blindada contra soporte/formación complejos) -->
+  <!-- SECCIÓN DE PRECIOS Y PLANES -->
   <section class="section section-precios">
     <div class="section-inner">
       <p class="eyebrow">Planes y tarifas</p>
@@ -248,41 +314,42 @@
             <span class="card-price-meta">Pago único · IVA no incluido</span>
           </div>
           
-          <p>Página única (estructura scroll) optimizada para captar clientes o leads desde el primer día de forma directa. Lista en 5-7 días.</p>
+          <p>La opción más rápida y directa para presentar tu servicio estrella y captar datos de clientes interesados sin complicaciones. Lista en 5-7 días.</p>
           
           <ul class="card-features-list">
-            <li>Diseño y desarrollo a medida</li>
-            <li>Formulario de contacto integrado</li>
-            <li>Optimizada para dispositivos móviles</li>
-            <li>SEO básico en metadatos incluido</li>
-            <li>Entrega directa de archivos listos para hosting</li>
+            <li>Diseño visual adaptado a tu negocio</li>
+            <li>Formulario directo para recibir solicitudes en tu email</li>
+            <li>Preparada para verse perfecta desde cualquier teléfono móvil</li>
+            <li><strong>SEO integrado:</strong> lista para que Google empiece a encontrarte</li>
+            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
+            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Landing%20Page" class="btn btn-primary">Pedir presupuesto</a>
         </article>
 
-        <!-- PLAN 2: WEB CORPORATIVA (DESTACADA / CONTRASTE IMPECABLE EN BLANCO) -->
+        <!-- PLAN 2: WEB CORPORATIVA -->
         <article class="pricing-card featured">
           <div class="card-top-row">
             <span class="feature-tag" style="background: rgba(255,255,255,0.15); color: #ffffff;">Profesional</span>
             <div class="card-tag">Más elegido</div>
           </div>
           <h3>Web Corporativa</h3>
-          <p class="card-subtitle">Hasta 5 páginas, misma estructura visual</p>
+          <p class="card-subtitle">Tu negocio al completo en internet</p>
           
           <div class="card-price-box">
             <div class="card-price"><span>desde</span> 349€</div>
             <span class="card-price-meta">Pago único · IVA no incluido</span>
           </div>
           
-          <p>Sitio web multipágina ideal para negocios asentados. Estructura estandarizada bajo una misma plantilla visual global. Lista en 2 semanas.</p>
+          <p>La solución ideal para generar confianza absoluta. Espacio dedicado para explicar quién eres, tus servicios y convencer a tu cliente ideal. Lista en 2 semanas.</p>
           
           <ul class="card-features-list">
-            <li>Hasta 5 secciones independientes (HTML)</li>
-            <li>Mismo archivo de estilos CSS global</li>
-            <li>SEO técnico en arquitectura web</li>
-            <li>Entrega y cierre del proyecto tras publicación</li>
-            <li>Opción a plan de mantenimiento mensual</li>
+            <li>Hasta 5 apartados para organizar toda la información de tu empresa</li>
+            <li>Presentación impecable de tus servicios, quiénes sois y contacto</li>
+            <li><strong>SEO integrado:</strong> optimizada para aparecer en búsquedas locales</li>
+            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
+            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Web%20Corporativa" class="btn" style="background: #ffffff; color: #1c3b34; width: 100%; text-align: center; font-weight: 600;">Pedir presupuesto</a>
@@ -295,27 +362,43 @@
             <div class="card-tag">A medida</div>
           </div>
           <h3>Proyecto Especial</h3>
-          <p class="card-subtitle">Estrategia con módulos externos</p>
+          <p class="card-subtitle">Automatización y herramientas externas</p>
           
           <div class="card-price-box">
             <div class="card-price"><span>desde</span> 599€</div>
             <span class="card-price-meta">Presupuesto cerrado según alcance</span>
           </div>
           
-          <p>Desarrollo web corporativo que requiere conectar herramientas de terceros ya pre-construidas mediante código embebido.</p>
+          <p>Para negocios que quieren ahorrar tiempo automatizando procesos clave directamente desde su página web oficial.</p>
           
           <ul class="card-features-list">
-            <li>Todo lo incluido en el Plan Corporativo</li>
-            <li>Pasarela de pago rápido (Botón Stripe / PayPal)</li>
-            <li>Reserva de citas automática (Widget TidyCal/Calendly)</li>
-            <li>Formularios avanzados de captación de leads</li>
-            <li>Cero programación de backend a medida</li>
+            <li>Toda la base sólida y secciones del Plan Corporativo</li>
+            <li>Cobros rápidos en la web (botones directos de Stripe o PayPal)</li>
+            <li>Reserva de citas automática personalizada vinculada a tu calendario</li>
+            <li><strong>SEO integrado:</strong> máxima optimización para captar clientes en tu nicho</li>
+            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
+            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Proyecto%20Especial" class="btn btn-primary">Pedir presupuesto</a>
         </article>
 
       </div>
+
+      <!-- BLOQUE DE CROSS-SELLING (Replicando la estructura de image_8bc008.png) -->
+      <div class="cross-selling-box">
+        <div class="cross-selling-content">
+          <h4>Servicios mensuales opcionales</h4>
+          <div class="cross-pills-container">
+            <span class="cross-pill">Mantenimiento desde 20€/mes</span>
+            <span class="cross-pill">SEO Local estratégico</span>
+            <span class="cross-pill">Gestión de Ficha Google</span>
+            <span class="cross-pill">Auditoría Digital</span>
+          </div>
+        </div>
+        <a href="mailto:aitorhernandez.es@gmail.com?subject=Consulta%20sobre%20Servicios%20Mensuales%20Opcionales" class="cross-selling-action">Hablar con un experto →</a>
+      </div>
+
     </div>
   </section>
 
@@ -328,33 +411,33 @@
       <div class="includes-grid">
         <article class="include-card">
           <span class="include-check">✓</span>
-          <h3>Diseño 100% a medida</h3>
-          <p>Adaptado a tu negocio y tu marca, sin plantillas genéricas.</p>
+          <h3>Diseño pensado para tu negocio</h3>
+          <p>Adaptado a tu sector y marca para diferenciarte de tu competencia local.</p>
         </article>
         <article class="include-card">
           <span class="include-check">✓</span>
-          <h3>SEO básico incluido</h3>
-          <p>Estructura, metadatos y velocidad pensados para que Google te encuentre desde el primer día.</p>
+          <h3>SEO integrado de salida</h3>
+          <p>Estructura interna preparada para que los buscadores te localicen e indexen correctamente.</p>
         </article>
         <article class="include-card">
           <span class="include-check">✓</span>
-          <h3>Adaptada a móvil</h3>
-          <p>Se ve y funciona bien en cualquier pantalla, que es por donde te van a encontrar la mayoría de tus clientes.</p>
+          <h3>Adaptada a pantallas móviles</h3>
+          <p>Se ve rápida y limpia desde cualquier smartphone, asegurando que no pierdas llamadas.</p>
         </article>
         <article class="include-card">
           <span class="include-check">✓</span>
-          <h3>Formulario o botón de contacto</h3>
-          <p>Para que tus clientes puedan escribirte directamente desde la web.</p>
+          <h3>Herramientas de contacto</h3>
+          <p>Accesos directos para que tus clientes te llamen o te escriban en un solo clic.</p>
         </article>
         <article class="include-card">
           <span class="include-check">✓</span>
           <h3>Una ronda de ajustes</h3>
-          <p>Revisamos juntos el resultado antes de publicar y ajustamos lo que no encaje.</p>
+          <p>Revisamos juntos la versión definitiva para pulir detalles visuales antes del lanzamiento.</p>
         </article>
         <article class="include-card">
           <span class="include-check">✓</span>
-          <h3>El código es tuyo</h3>
-          <p>Te entregamos el paquete completo de archivos. Puedes llevártelo al hosting que prefieras, sin permiso ni dependencias.</p>
+          <h3>Independencia total</h3>
+          <p>La web se publica a tu nombre y bajo tu propiedad. Sin contratos de permanencia obligatorios.</p>
         </article>
       </div>
     </div>
@@ -364,13 +447,13 @@
   <section class="section section-no-incluye">
     <div class="section-inner narrow">
       <p class="eyebrow">Para que no haya sorpresas</p>
-      <h2>Lo que <em>no incluye</em></h2>
+      <h2>Lo que <em>notarás fuera</em></h2>
 
       <ul class="no-includes-list">
-        <li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
-        <li><span><strong>Tienda online o pasarela de pago avanzada:</strong> si necesitas una plataforma e-commerce masiva o bases de datos a medida, es un proyecto que no realizamos.</span></li>
-        <li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año.</span></li>
-        <li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
+        <li><span><strong>Redacción de contenido extenso:</strong> tú nos facilitas los datos y textos básicos del negocio y nosotros los estructuramos de manera atractiva.</span></li>
+        <li><span><strong>Tiendas online complejas:</strong> si necesitas un catálogo masivo con pasarelas de envío complejas o bases de datos a medida, es un alcance que no realizamos.</span></li>
+        <li><span><strong>Renovaciones anuales:</strong> el dominio y alojamiento incluidos el primer año se renuevan de forma transparente por solo 22€/año.</span></li>
+        <li><span><strong>Soporte técnico no contratado:</strong> el soporte continuado queda cubierto exclusivamente a través de la contratación del plan de mantenimiento opcional.</span></li>
       </ul>
 
       <!-- NOTA DE TRANSPARENCIA SOBRE EL ALCANCE -->
@@ -380,7 +463,7 @@
     </div>
   </section>
 
-  <!-- PASO A PASO (Flujo de trabajo optimizado) -->
+  <!-- PASO A PASO -->
   <section class="section section-proceso">
     <div class="section-inner">
       <p class="eyebrow">Cómo trabajamos este servicio</p>
