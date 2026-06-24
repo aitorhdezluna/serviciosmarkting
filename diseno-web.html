@@ -43,6 +43,7 @@
     object-fit: cover;
   }
   
+  /* Rejilla de precios */
   .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -106,6 +107,8 @@
     color: rgba(22, 32, 29, 0.5);
     margin-top: 2px;
   }
+
+  /* LISTA DE CARACTERÍSTICAS (Optimización UX/UI según image_8c20ca.png) */
   .pricing-card .card-features-list {
     list-style: none;
     padding: 0;
@@ -115,7 +118,7 @@
   }
   .pricing-card .card-features-list li {
     font-size: 0.95rem;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
     display: flex;
     align-items: flex-start;
   }
@@ -123,10 +126,26 @@
     content: "✓";
     color: #1c3b34;
     font-weight: bold;
-    margin-right: 8px;
+    margin-right: 10px;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+  .pricing-card .card-features-list li .feature-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing-card .card-features-list li .feature-text strong {
+    display: block;
+    margin-bottom: 2px;
+    color: #1c3b34;
+  }
+  .pricing-card .card-features-list li .feature-text span {
+    font-size: 0.88rem;
+    color: rgba(22, 32, 29, 0.65);
+    line-height: 1.35;
   }
   
-  /* Tarjeta destacada */
+  /* Tarjeta destacada - Contraste blindado para evitar texto oscuro */
   .pricing-card.featured {
     background: #1c3b34;
     color: #ffffff !important;
@@ -151,14 +170,17 @@
   .pricing-card.featured .card-features-list {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
-  .pricing-card.featured .card-features-list li {
-    color: rgba(255, 255, 255, 0.95) !important;
-  }
   .pricing-card.featured .card-features-list li::before {
     color: #ffffff !important;
   }
+  .pricing-card.featured .card-features-list li .feature-text strong {
+    color: #ffffff !important;
+  }
+  .pricing-card.featured .card-features-list li .feature-text span {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
   
-  /* NUEVOS ESTILOS: Bloque Cross-selling basado en image_8bc008.png */
+  /* Bloque Cross-selling basado en la estructura de image_8bc008.png */
   .cross-selling-box {
     background: #ffffff;
     border: 1px solid rgba(22, 32, 29, 0.08);
@@ -240,7 +262,7 @@
   "name": "Diseño y desarrollo de página web",
   "provider": { "@type": "Organization", "name": "Zenpyme", "url": "https://zenpyme.com/" },
   "areaServed": "ES",
-  "description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido and entrega en menos de una semana.",
+  "description": "Diseño y desarrollo de páginas web para pequeños negocios y autónomos, con SEO básico incluido y entrega en menos de una semana.",
   "offers": { "@type": "Offer", "price": "149", "priceCurrency": "EUR" }
 }
 </script>
@@ -317,12 +339,42 @@
           <p>La opción más rápida y directa para presentar tu servicio estrella y captar datos de clientes interesados sin complicaciones. Lista en 5-7 días.</p>
           
           <ul class="card-features-list">
-            <li>Diseño visual adaptado a tu negocio</li>
-            <li>Formulario directo para recibir solicitudes en tu email</li>
-            <li>Preparada para verse perfecta desde cualquier teléfono móvil</li>
-            <li><strong>SEO integrado:</strong> lista para que Google empiece a encontrarte</li>
-            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
-            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
+            <li>
+              <div class="feature-text">
+                <strong>Diseño visual</strong>
+                <span>Adaptado a la identidad visual de tu marca.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Formulario directo</strong>
+                <span>Recibe solicitudes de presupuesto directamente en tu email.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Adaptabilidad móvil</strong>
+                <span>Preparada para verse y navegarse de forma perfecta en smartphones.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Estructura optimizada de salida para que Google empiece a encontrarte.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Landing%20Page" class="btn btn-primary">Pedir presupuesto</a>
@@ -345,17 +397,42 @@
           <p>La solución ideal para generar confianza absoluta. Espacio dedicado para explicar quién eres, tus servicios y convencer a tu cliente ideal. Lista en 2 semanas.</p>
           
           <ul class="card-features-list">
-            <li>Hasta 5 apartados para organizar toda la información de tu empresa</li>
-            <li>Presentación impecable de tus servicios, quiénes sois y contacto</li>
-            <li><strong>SEO integrado:</strong> optimizada para aparecer en búsquedas locales</li>
-            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
-            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
+            <li>
+              <div class="feature-text">
+                <strong>Estructura completa</strong>
+                <span>Hasta 5 apartados organizados para distribuir la información de tu empresa.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Secciones clave</strong>
+                <span>Presentación impecable de tus servicios, quiénes sois y contacto directo.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Estructura optimizada de salida para aparecer en búsquedas locales de tu sector.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Web%20Corporativa" class="btn" style="background: #ffffff; color: #1c3b34; width: 100%; text-align: center; font-weight: 600;">Pedir presupuesto</a>
         </article>
 
-        <!-- PLAN 3: PROYECTO ESPECIAL NO-CODE -->
+        <!-- PLAN 3: PROYECTO ESPECIAL -->
         <article class="pricing-card">
           <div class="card-top-row">
             <span class="feature-tag">Premium</span>
@@ -372,12 +449,42 @@
           <p>Para negocios que quieren ahorrar tiempo automatizando procesos clave directamente desde su página web oficial.</p>
           
           <ul class="card-features-list">
-            <li>Toda la base sólida y secciones del Plan Corporativo</li>
-            <li>Cobros rápidos en la web (botones directos de Stripe o PayPal)</li>
-            <li>Reserva de citas automática personalizada vinculada a tu calendario</li>
-            <li><strong>SEO integrado:</strong> máxima optimización para captar clientes en tu nicho</li>
-            <li>Opción de tranquilidad con mantenimiento mensual (20€/mes)</li>
-            <li><strong>Dominio y alojamiento gratis 1 año</strong> (después 22€/año)</li>
+            <li>
+              <div class="feature-text">
+                <strong>Base corporativa</strong>
+                <span>Toda la solidez, apartados y secciones del Plan Corporativo incluidos.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Pasarela de cobro</strong>
+                <span>Cobros rápidos integrados mediante botones de Stripe o PayPal.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Reserva de citas</strong>
+                <span>Sistema automático personalizado y sincronizado con tu propio calendario.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Máxima optimización interna para captar clientes en tu nicho específico.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
           
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Proyecto%20Especial" class="btn btn-primary">Pedir presupuesto</a>
@@ -385,7 +492,7 @@
 
       </div>
 
-      <!-- BLOQUE DE CROSS-SELLING (Replicando la estructura de image_8bc008.png) -->
+      <!-- BLOQUE DE CROSS-SELLING (Estructura image_8bc008.png) -->
       <div class="cross-selling-box">
         <div class="cross-selling-content">
           <h4>Servicios mensuales opcionales</h4>
@@ -443,22 +550,22 @@
     </div>
   </section>
 
-  <!-- QUÉ NO INCLUYE -->
+  <!-- QUÉ NO INCLUYE (Actualizado según tus instrucciones exactas) -->
   <section class="section section-no-incluye">
     <div class="section-inner narrow">
       <p class="eyebrow">Para que no haya sorpresas</p>
-      <h2>Lo que <em>notarás fuera</em></h2>
+      <h2>Lo que <em>no incluye</em></h2>
 
       <ul class="no-includes-list">
-        <li><span><strong>Redacción de contenido extenso:</strong> tú nos facilitas los datos y textos básicos del negocio y nosotros los estructuramos de manera atractiva.</span></li>
-        <li><span><strong>Tiendas online complejas:</strong> si necesitas un catálogo masivo con pasarelas de envío complejas o bases de datos a medida, es un alcance que no realizamos.</span></li>
-        <li><span><strong>Renovaciones anuales:</strong> el dominio y alojamiento incluidos el primer año se renuevan de forma transparente por solo 22€/año.</span></li>
-        <li><span><strong>Soporte técnico no contratado:</strong> el soporte continuado queda cubierto exclusivamente a través de la contratación del plan de mantenimiento opcional.</span></li>
+        <li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
+        <li><span><strong>Tienda online o pasarela de pago avanzada:</strong> si necesitas una plataforma e-commerce masiva o bases de datos a medida, es un proyecto que no realizamos.</span></li>
+        <li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año (gratis el primer año).</span></li>
+        <li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
       </ul>
 
-      <!-- NOTA DE TRANSPARENCIA SOBRE EL ALCANCE -->
+      <!-- NOTA DE TRANSPARENCIA SOBRE EL ALCANCE (Con el valor añadido de la IA) -->
       <div class="scope-box">
-        <strong>📌 Nota de transparencia sobre el alcance:</strong> Para mantener los plazos de entrega óptimos y ágiles, este servicio requiere que aportes los textos mínimos y las imágenes de tu negocio a través del briefing. Si no dispones de ellos, te facilitaré una guía rápida estructurada para completarlos por tu cuenta. El proyecto se inicia una vez recibidos todos los materiales.
+        <strong>📌 Nota de transparencia sobre el alcance:</strong> Para mantener los plazos de entrega óptimos y ágiles, este servicio requiere que aportes los textos mínimos y las imágenes de tu negocio a través del briefing. Si no dispones de textos redactados, los podemos generar utilizando Inteligencia Artificial; para ello, es necesario que nos dejes una base inicial sobre la empresa y los servicios o productos que vendes. A partir de ahí se generan y quedará bajo tu responsabilidad la revisión final de los mismos. El proyecto se inicia una vez recibidos todos los materiales.
       </div>
     </div>
   </section>
