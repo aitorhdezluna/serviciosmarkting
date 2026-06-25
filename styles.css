@@ -287,6 +287,25 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
    SECTIONS — general
    ============================================ */
 .section-why { background: var(--bg); }
+.why-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  max-width: var(--max-w);
+}
+.why-grid .lead { max-width: 100%; }
+.why-illustration img { width: 100%; height: auto; max-width: 380px; margin: 0 auto; display: block; }
+
+.cta-illustration {
+  max-width: 340px;
+  margin: 0 auto 12px;
+  background: #f7f5f0;
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.cta-illustration img { width: 100%; height: auto; display: block; }
+
 
 .section-servicios,
 .section-proceso,
@@ -406,6 +425,36 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   padding-top: 22px;
 }
 .reason-card p { color: var(--gray); margin: 0; font-size: 0.95rem; }
+
+/* Quiénes somos */
+.section-equipo { background: var(--bg); }
+.team-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+.team-point {
+  background: #fff;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+}
+.team-point-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+.team-point p { margin: 0; font-size: 0.92rem; color: var(--gray); }
+.team-footnote {
+  margin-top: 28px;
+  font-size: 0.94rem;
+  color: var(--gray);
+  font-style: italic;
+}
 
 /* Proceso */
 .process-list {
@@ -580,6 +629,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* ============================================
    SERVICE PAGES
    ============================================ */
+.service-illustration {
+  max-width: 420px;
+  margin: 8px auto 0;
+}
+.service-illustration img { width: 100%; height: auto; }
+
+.include-illustration {
+  max-width: 380px;
+  margin: 0 auto 16px;
+}
+.include-illustration img { width: 100%; height: auto; }
+
 .breadcrumb-row {
   max-width: var(--max-w);
   margin: 0 auto;
@@ -695,6 +756,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .pricing-row { grid-template-columns: 1fr; }
   .service-pair { grid-template-columns: 1fr; }
   .reason-grid { grid-template-columns: 1fr; }
+  .team-points { grid-template-columns: 1fr; }
   .process-list { grid-template-columns: repeat(2, 1fr); }
   .guarantee-grid { grid-template-columns: 1fr; }
   .sector-grid { grid-template-columns: repeat(2, 1fr); }
@@ -702,6 +764,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .metrics-strip { grid-template-columns: repeat(2, 1fr); }
   .metric:nth-child(2) { border-right: none; }
   .includes-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .why-illustration { order: -1; }
 }
 
 @media (max-width: 720px) {
