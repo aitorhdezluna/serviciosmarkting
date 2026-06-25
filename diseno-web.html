@@ -43,27 +43,22 @@
     object-fit: cover;
   }
   
-  /* Rejilla de precios modificada para ser más compacta */
+  /* Rejilla de precios */
   .pricing-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
     margin-top: 32px;
   }
   .pricing-card {
     background: #ffffff;
     border: 1px solid rgba(22, 32, 29, 0.08);
     border-radius: 8px;
-    padding: 20px 16px;
+    padding: 32px 24px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    font-size: 0.9rem;
-  }
-  .pricing-card p {
-    font-size: 0.85rem;
-    line-height: 1.4;
   }
   .pricing-card .card-top-row {
     display: flex;
@@ -73,34 +68,34 @@
   }
   .pricing-card .card-tag {
     font-family: 'Space Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     background: rgba(22, 32, 29, 0.05);
-    padding: 2px 6px;
+    padding: 2px 8px;
     border-radius: 4px;
     color: #1c3b34;
   }
   .pricing-card h3 {
     font-family: 'Lora', serif;
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     margin: 0 0 4px 0;
   }
   .pricing-card .card-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: rgba(22, 32, 29, 0.6);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   .pricing-card .card-price-box {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
   .pricing-card .card-price {
     font-family: 'Lora', serif;
-    font-size: 1.9rem;
+    font-size: 2.25rem;
     font-weight: 600;
     color: #1c3b34;
   }
   .pricing-card .card-price span {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-style: italic;
@@ -108,21 +103,22 @@
   }
   .pricing-card .card-price-meta {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: rgba(22, 32, 29, 0.5);
     margin-top: 2px;
   }
 
+  /* LISTA DE CARACTERÍSTICAS (Optimización UX/UI según image_8c20ca.png) */
   .pricing-card .card-features-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 24px 0;
+    margin: 0 0 32px 0;
     border-top: 1px solid rgba(22, 32, 29, 0.08);
-    padding-top: 16px;
+    padding-top: 20px;
   }
   .pricing-card .card-features-list li {
-    font-size: 0.85rem;
-    margin-bottom: 12px;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
     display: flex;
     align-items: flex-start;
   }
@@ -130,8 +126,8 @@
     content: "✓";
     color: #1c3b34;
     font-weight: bold;
-    margin-right: 8px;
-    margin-top: 1px;
+    margin-right: 10px;
+    margin-top: 2px;
     flex-shrink: 0;
   }
   .pricing-card .card-features-list li .feature-text {
@@ -140,15 +136,16 @@
   }
   .pricing-card .card-features-list li .feature-text strong {
     display: block;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     color: #1c3b34;
   }
   .pricing-card .card-features-list li .feature-text span {
-    font-size: 0.8rem;
+    font-size: 0.88rem;
     color: rgba(22, 32, 29, 0.65);
-    line-height: 1.3;
+    line-height: 1.35;
   }
   
+  /* Tarjeta destacada - Contraste blindado para evitar texto oscuro */
   .pricing-card.featured {
     background: #1c3b34;
     color: #ffffff !important;
@@ -183,6 +180,7 @@
     color: rgba(255, 255, 255, 0.8) !important;
   }
   
+  /* Bloque Cross-selling basado en la estructura de image_8bc008.png */
   .cross-selling-box {
     background: #ffffff;
     border: 1px solid rgba(22, 32, 29, 0.08);
@@ -235,43 +233,7 @@
     opacity: 0.8;
   }
 
-  /* REJILLA DE CASOS DE ÉXITO EN 4 COLUMNAS UNA FILA */
-  .service-pair {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 32px;
-  }
-  .service-pair .service-card {
-    padding: 16px;
-    font-size: 0.85rem;
-  }
-  .service-pair .service-card h3 {
-    font-size: 1.1rem;
-    margin-top: 12px;
-    margin-bottom: 6px;
-  }
-  .service-pair .service-card p {
-    font-size: 0.8rem;
-    line-height: 1.4;
-  }
-
-  @media (max-width: 1024px) {
-    .pricing-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .service-pair {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
   @media (max-width: 768px) {
-    .pricing-grid {
-      grid-template-columns: 1fr;
-    }
-    .service-pair {
-      grid-template-columns: 1fr;
-    }
     .cross-selling-box {
       flex-direction: column;
       align-items: flex-start;
@@ -341,6 +303,7 @@
     <a href="index.html#servicios">← Todos los servicios</a>
   </div>
 
+  <!-- HERO DE SERVICIO -->
   <section class="service-hero">
     <div class="service-hero-inner">
       <span class="service-kicker">Servicio principal</span>
@@ -351,12 +314,15 @@
     </div>
   </section>
 
+  <!-- SECCIÓN DE PRECIOS Y PLANES -->
   <section class="section section-precios">
     <div class="section-inner">
       <p class="eyebrow">Planes y tarifas</p>
       <h2>Soluciones con <em>presupuesto cerrado</em></h2>
       
       <div class="pricing-grid">
+        
+        <!-- PLAN 1: LANDING PAGE -->
         <article class="pricing-card">
           <div class="card-top-row">
             <span class="feature-tag">Express</span>
@@ -364,22 +330,57 @@
           </div>
           <h3>Landing Page</h3>
           <p class="card-subtitle">Una página, un único objetivo</p>
+          
           <div class="card-price-box">
             <div class="card-price"><span>desde</span> 149€</div>
             <span class="card-price-meta">Pago único · IVA no incluido</span>
           </div>
+          
           <p>La opción más rápida y directa para presentar tu servicio estrella y captar datos de clientes interesados sin complicaciones. Lista en 5-7 días.</p>
+          
           <ul class="card-features-list">
-            <li><div class="feature-text"><strong>Diseño visual</strong><span>Adaptado a la identidad visual de tu marca.</span></div></li>
-            <li><div class="feature-text"><strong>Formulario directo</strong><span>Recibe solicitudes de presupuesto directamente en tu email.</span></div></li>
-            <li><div class="feature-text"><strong>Adaptabilidad móvil</strong><span>Preparada para verse y navegarse de forma perfecta en smartphones.</span></div></li>
-            <li><div class="feature-text"><strong>SEO integrado</strong><span>Estructura optimizada de salida para que Google empiece a encontrarte.</span></div></li>
-            <li><div class="feature-text"><strong>Mantenimiento opcional</strong><span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span></div></li>
-            <li><div class="feature-text"><strong>Dominio y alojamiento</strong><span>Incluidos gratis el primer año (después solo 22€/año).</span></div></li>
+            <li>
+              <div class="feature-text">
+                <strong>Diseño visual</strong>
+                <span>Adaptado a la identidad visual de tu marca.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Formulario directo</strong>
+                <span>Recibe solicitudes de presupuesto directamente en tu email.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Adaptabilidad móvil</strong>
+                <span>Preparada para verse y navegarse de forma perfecta en smartphones.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Estructura optimizada de salida para que Google empiece a encontrarte.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
+          
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Landing%20Page" class="btn btn-primary">Pedir presupuesto</a>
         </article>
 
+        <!-- PLAN 2: WEB CORPORATIVA -->
         <article class="pricing-card featured">
           <div class="card-top-row">
             <span class="feature-tag" style="background: rgba(255,255,255,0.15); color: #ffffff;">Profesional</span>
@@ -387,21 +388,51 @@
           </div>
           <h3>Web Corporativa</h3>
           <p class="card-subtitle">Tu negocio al completo en internet</p>
+          
           <div class="card-price-box">
             <div class="card-price"><span>desde</span> 349€</div>
             <span class="card-price-meta">Pago único · IVA no incluido</span>
           </div>
+          
           <p>La solución ideal para generar confianza absoluta. Espacio dedicado para explicar quién eres, tus servicios y convencer a tu cliente ideal. Lista en 2 semanas.</p>
+          
           <ul class="card-features-list">
-            <li><div class="feature-text"><strong>Estructura completa</strong><span>Hasta 5 apartados organizados para distribuir la información de tu empresa.</span></div></li>
-            <li><div class="feature-text"><strong>Secciones clave</strong><span>Presentación impecable de tus servicios, quiénes sois y contacto directo.</span></div></li>
-            <li><div class="feature-text"><strong>SEO integrado</strong><span>Estructura optimizada de salida para aparecer en búsquedas locales de tu sector.</span></div></li>
-            <li><div class="feature-text"><strong>Mantenimiento opcional</strong><span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span></div></li>
-            <li><div class="feature-text"><strong>Dominio y alojamiento</strong><span>Incluidos gratis el primer año (después solo 22€/año).</span></div></li>
+            <li>
+              <div class="feature-text">
+                <strong>Estructura completa</strong>
+                <span>Hasta 5 apartados organizados para distribuir la información de tu empresa.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Secciones clave</strong>
+                <span>Presentación impecable de tus servicios, quiénes sois y contacto directo.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Estructura optimizada de salida para aparecer en búsquedas locales de tu sector.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
+          
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Web%20Corporativa" class="btn" style="background: #ffffff; color: #1c3b34; width: 100%; text-align: center; font-weight: 600;">Pedir presupuesto</a>
         </article>
 
+        <!-- PLAN 3: PROYECTO ESPECIAL -->
         <article class="pricing-card">
           <div class="card-top-row">
             <span class="feature-tag">Premium</span>
@@ -409,23 +440,59 @@
           </div>
           <h3>Proyecto Especial</h3>
           <p class="card-subtitle">Automatización y herramientas externas</p>
+          
           <div class="card-price-box">
             <div class="card-price"><span>desde</span> 599€</div>
             <span class="card-price-meta">Presupuesto cerrado según alcance</span>
           </div>
+          
           <p>Para negocios que quieren ahorrar tiempo automatizando procesos clave directamente desde su página web oficial.</p>
+          
           <ul class="card-features-list">
-            <li><div class="feature-text"><strong>Base corporativa</strong><span>Toda la solidez, apartados y secciones del Plan Corporativo incluidos.</span></div></li>
-            <li><div class="feature-text"><strong>Pasarela de cobro</strong><span>Cobros rápidos integrados mediante botones de Stripe o PayPal.</span></div></li>
-            <li><div class="feature-text"><strong>Reserva de citas</strong><span>Sistema automático personalizado y sincronizado con tu propio calendario.</span></div></li>
-            <li><div class="feature-text"><strong>SEO integrado</strong><span>Máxima optimización interna para captar clientes en tu nicho específico.</span></div></li>
-            <li><div class="feature-text"><strong>Mantenimiento opcional</strong><span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span></div></li>
-            <li><div class="feature-text"><strong>Dominio y alojamiento</strong><span>Incluidos gratis el primer año (después solo 22€/año).</span></div></li>
+            <li>
+              <div class="feature-text">
+                <strong>Base corporativa</strong>
+                <span>Toda la solidez, apartados y secciones del Plan Corporativo incluidos.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Pasarela de cobro</strong>
+                <span>Cobros rápidos integrados mediante botones de Stripe o PayPal.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Reserva de citas</strong>
+                <span>Sistema automático personalizado y sincronizado con tu propio calendario.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>SEO integrado</strong>
+                <span>Máxima optimización interna para captar clientes en tu nicho específico.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Mantenimiento opcional</strong>
+                <span>Tranquilidad y actualizaciones técnicas por solo 20€/mes.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-text">
+                <strong>Dominio y alojamiento</strong>
+                <span>Incluidos gratis el primer año (después solo 22€/año).</span>
+              </div>
+            </li>
           </ul>
+          
           <a href="mailto:aitorhernandez.es@gmail.com?subject=Interes%20en%20Plan%20Proyecto%20Especial" class="btn btn-primary">Pedir presupuesto</a>
         </article>
+
       </div>
 
+      <!-- BLOQUE DE CROSS-SELLING (Estructura image_8bc008.png) -->
       <div class="cross-selling-box">
         <div class="cross-selling-content">
           <h4>Servicios mensuales opcionales</h4>
@@ -438,102 +505,170 @@
         </div>
         <a href="mailto:aitorhernandez.es@gmail.com?subject=Consulta%20sobre%20Servicios%20Mensuales%20Opcionales" class="cross-selling-action">Hablar con un experto →</a>
       </div>
+
     </div>
   </section>
 
+  <!-- QUÉ INCLUYE -->
   <section class="section section-incluye">
     <div class="section-inner">
       <p class="eyebrow">Qué incluye</p>
       <h2>Esto es lo que <em>te llevas</em></h2>
+
       <div class="includes-grid">
-        <article class="include-card"><span class="include-check">✓</span><h3>Diseño pensado para tu negocio</h3><p>Adaptado a tu sector y marca para diferenciarte de tu competencia local.</p></article>
-        <article class="include-card"><span class="include-check">✓</span><h3>SEO integrado de salida</h3><p>Estructura interna preparada para que los buscadores te localicen e indexen correctamente.</p></article>
-        <article class="include-card"><span class="include-check">✓</span><h3>Adaptada a pantallas móviles</h3><p>Se ve rápida y limpia desde cualquier smartphone, asegurando que no pierdas llamadas.</p></article>
-        <article class="include-card"><span class="include-check">✓</span><h3>Herramientas de contacto</h3><p>Accesos directos para que tus clientes te llamen o te escriban en un solo clic.</p></article>
-        <article class="include-card"><span class="include-check">✓</span><h3>Una ronda de ajustes</h3><p>Revisamos juntos la versión definitiva para pulir detalles visuales antes del lanzamiento.</p></article>
-        <article class="include-card"><span class="include-check">✓</span><h3>Independencia total</h3><p>La web se publica a tu nombre y bajo tu propiedad. Sin contratos de permanencia obligatorios.</p></article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>Diseño pensado para tu negocio</h3>
+          <p>Adaptado a tu sector y marca para diferenciarte de tu competencia local.</p>
+        </article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>SEO integrado de salida</h3>
+          <p>Estructura interna preparada para que los buscadores te localicen e indexen correctamente.</p>
+        </article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>Adaptada a pantallas móviles</h3>
+          <p>Se ve rápida y limpia desde cualquier smartphone, asegurando que no pierdas llamadas.</p>
+        </article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>Herramientas de contacto</h3>
+          <p>Accesos directos para que tus clientes te llamen o te escriban en un solo clic.</p>
+        </article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>Una ronda de ajustes</h3>
+          <p>Revisamos juntos la versión definitiva para pulir detalles visuales antes del lanzamiento.</p>
+        </article>
+        <article class="include-card">
+          <span class="include-check">✓</span>
+          <h3>Independencia total</h3>
+          <p>La web se publica a tu nombre y bajo tu propiedad. Sin contratos de permanencia obligatorios.</p>
+        </article>
       </div>
     </div>
   </section>
 
+  <!-- QUÉ NO INCLUYE (Actualizado según tus instrucciones exactas) -->
   <section class="section section-no-incluye">
     <div class="section-inner narrow">
       <p class="eyebrow">Para que no haya sorpresas</p>
       <h2>Lo que <em>no incluye</em></h2>
+
       <ul class="no-includes-list">
         <li><span><strong>Redacción de contenido extenso:</strong> nos das la información básica de tu negocio y la convertimos en texto, pero no es un servicio de copywriting profundo.</span></li>
         <li><span><strong>Tienda online o pasarela de pago avanzada:</strong> si necesitas una plataforma e-commerce masiva o bases de datos a medida, es un proyecto que no realizamos.</span></li>
         <li><span><strong>Dominio y hosting:</strong> se gestionan por separado, por 22€/año (gratis el primer año).</span></li>
         <li><span><strong>Mantenimiento mensual:</strong> es opcional y se contrata aparte, por 20€/mes.</span></li>
       </ul>
+
+      <!-- NOTA DE TRANSPARENCIA SOBRE EL ALCANCE (Con el valor añadido de la IA) -->
       <div class="scope-box">
         <strong>📌 Nota de transparencia sobre el alcance:</strong> Para mantener los plazos de entrega óptimos y ágiles, este servicio requiere que aportes los textos mínimos y las imágenes de tu negocio a través del briefing. Si no dispones de textos redactados, los podemos generar utilizando Inteligencia Artificial; para ello, es necesario que nos dejes una base inicial sobre la empresa y los servicios o productos que vendes. A partir de ahí se generan y quedará bajo tu responsabilidad la revisión final de los mismos. El proyecto se inicia una vez recibidos todos los materiales.
       </div>
     </div>
   </section>
 
+  <!-- PASO A PASO -->
   <section class="section section-proceso">
     <div class="section-inner">
       <p class="eyebrow">Cómo trabajamos este servicio</p>
       <h2>Paso a <em>paso</em></h2>
+
       <ol class="process-list">
-        <li class="process-step"><span class="step-num">[ 01 ]</span><h3>Cuéntanos tu negocio</h3><p>Nos escribes contándonos a qué te dedicas y qué necesitas. Respondemos en 24-48h con una propuesta clara.</p></li>
-        <li class="process-step"><span class="step-num">[ 02 ]</span><h3>Briefing guiado</h3><p>Tras la contratación, completas un formulario exclusivo en nuestra web. En menos de 15 minutos capturamos tus objetivos, colores y referencias sin reuniones infinitas.</p></li>
-        <li class="process-step"><span class="step-num">[ 03 ]</span><h3>Diseño y desarrollo</h3><p>Construimos tu web traduciendo tu briefing en código limpio y eficiente, con SEO básico integrado desde la primera línea.</p></li>
-        <li class="process-step"><span class="step-num">[ 04 ]</span><h3>Revisión y publicación</h3><p>Revisas el resultado, realizamos los ajustes finos concentrados de una sola vez y la publicamos en tu dominio. Listo.</p></li>
+        <li class="process-step">
+          <span class="step-num">[ 01 ]</span>
+          <h3>Cuéntanos tu negocio</h3>
+          <p>Nos escribes contándonos a qué te dedicas y qué necesitas. Respondemos en 24-48h con una propuesta clara.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">[ 02 ]</span>
+          <h3>Briefing guiado</h3>
+          <p>Tras la contratación, completas un formulario exclusivo en nuestra web. En menos de 15 minutos capturamos tus objetivos, colores y referencias sin reuniones infinitas.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">[ 03 ]</span>
+          <h3>Diseño y desarrollo</h3>
+          <p>Construimos tu web traduciendo tu briefing en código limpio y eficiente, con SEO básico integrado desde la primera línea.</p>
+        </li>
+        <li class="process-step">
+          <span class="step-num">[ 04 ]</span>
+          <h3>Revisión y publicación</h3>
+          <p>Revisas el resultado, realizamos los ajustes finos concentrados de una sola vez y la publicamos en tu dominio. Listo.</p>
+        </li>
       </ol>
+
       <p class="faq-note">¿Tienes dudas? Revisa las <a href="index.html#faq">preguntas frecuentes</a> o escríbenos directamente.</p>
     </div>
   </section>
 
-  <!-- PORTFOLIO COMPLETO EN DISENO-WEB.HTML -->
+  <!-- PROYECTOS REALIZADOS (PORTFOLIO) -->
   <section class="section section-portfolio" id="portfolio">
     <div class="section-inner">
       <p class="eyebrow">Portfolio</p>
       <h2>Casos reales, <em>resultados reales</em></h2>
       <p class="lead">Echa un vistazo a algunos de los últimos proyectos que hemos diseñado, desarrollado y puesto en marcha para autónomos y profesionales.</p>
 
-      <div class="service-pair">
+      <div class="feature-grid">
         <article class="service-card">
-          <div class="service-card-image"><img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo"></div>
+          <div class="service-card-image">
+            <img src="web-aitor-tres-veces-yo-desktop.PNG" alt="Captura de pantalla de la web de Aitor Hernández - Tres Veces Yo">
+          </div>
           <span class="feature-tag">Web Personal</span>
           <h3>Aitor Hernández - Tres Veces Yo</h3>
           <p>Sitio web para el poemario y libro "Tres veces yo". Un espacio digital limpio enfocado en la obra, la experiencia de lectura y la conexión directa con los lectores.</p>
-          <div class="service-card-actions"><a href="https://aitorhdez.com" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a></div>
+          <div class="service-card-actions">
+            <a href="https://aitorhdez.com" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+          </div>
         </article>
 
         <article class="service-card">
-          <div class="service-card-image"><img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé"></div>
+          <div class="service-card-image">
+            <img src="web-mamerecumbe-agrupacion-musical.PNG" alt="Captura de pantalla de la web de la Agrupación Musical Mamerecumbé">
+          </div>
           <span class="feature-tag">Proyecto Cultural</span>
           <h3>Agrupación Musical Mamerecumbé</h3>
           <p>Diseño y desarrollo web optimizado para difundir la historia, la galería de imágenes y la agenda de eventos de la agrupación, con código integrado de forma eficiente.</p>
-          <div class="service-card-actions"><a href="https://aitorhdezluna.github.io/mamerecumbe/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a></div>
+          <div class="service-card-actions">
+            <a href="https://aitorhdezluna.github.io/mamerecumbe/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+          </div>
         </article>
 
         <article class="service-card">
-          <div class="service-card-image"><img src="captura-abogado-desktop.png" alt="Captura de pantalla de la web de Abogado Laboralista"></div>
-          <span class="feature-tag">Servicios Profesionales</span>
-          <h3>Bufete de Abogados - Derecho Laboral</h3>
-          <p>Página de aterrizaje corporativa enfocada en la conversión, gestión de citas ágil y exposición clara de especialidades jurídicas locales.</p>
-          <div class="service-card-actions"><a href="#" class="link-arrow">Ver proyecto →</a></div>
+          <div class="service-card-image">
+            <img src="web-origen-terroir-desktop.PNG" alt="Captura de pantalla de la web de Origen & Terroir">
+          </div>
+          <span class="feature-tag">Boutique Gastronómica</span>
+          <h3>Origen & Terroir</h3>
+          <p>Web de alta gama para una boutique de café de especialidad y repostería artesana en Tenerife. Diseño editorial oscuro centrado en la colección de temporada y la experiencia sensorial de marca.</p>
+          <div class="service-card-actions">
+            <a href="https://aitorhdezluna.github.io/origenandterroir/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+          </div>
         </article>
 
         <article class="service-card">
-          <div class="service-card-image"><img src="captura-restaurante-desktop.png" alt="Captura de pantalla de la web de Restaurante Local"></div>
-          <span class="feature-tag">Gastronomía</span>
-          <h3>Restaurante Tradicional - Menú Digital</h3>
-          <p>Diseño minimalista optimizado para dispositivos móviles, integración de reservas automatizadas y visualización de carta interactiva.</p>
-          <div class="service-card-actions"><a href="#" class="link-arrow">Ver proyecto →</a></div>
+          <div class="service-card-image">
+            <img src="web-taller-volante.PNG" alt="Captura de pantalla de la web de Taller Volante">
+          </div>
+          <span class="feature-tag">Automoción</span>
+          <h3>Taller Volante</h3>
+          <p>Web corporativa para un taller mecánico en Santa Cruz de Tenerife. Incluye especialidades técnicas, asistente de diagnóstico preliminar y reseñas verificadas de clientes.</p>
+          <div class="service-card-actions">
+            <a href="https://aitorhdezluna.github.io/tallervolante/" target="_blank" rel="noopener" class="link-arrow">Visitar sitio web →</a>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
+  <!-- CTA FINAL -->
   <section class="section section-cta-final">
     <div class="section-inner narrow center">
       <h2>¿Listo para <em>empezar?</em></h2>
       <p class="lead">Cuéntanos tu proyecto en dos minutos. Te respondemos con una propuesta clara, sin compromiso.</p>
       <a href="mailto:aitorhernandez.es@gmail.com?subject=Quiero%20una%20web%20para%20mi%20negocio" class="btn btn-primary btn-lg">Quiero mi web</a>
+
       <div class="final-meta">
         <div><strong>Respuesta en 48h</strong><span>De lunes a viernes</span></div>
         <div><strong>Email directo</strong><span>aitorhernandez.es@gmail.com</span></div>
@@ -541,6 +676,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer class="site-footer">
